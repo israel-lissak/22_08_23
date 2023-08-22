@@ -1,0 +1,16 @@
+{
+  "name": "22_08_23",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch ./ex.ts",
+    "start2": "tsc --watch ./tsBasicEx.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
