@@ -69,7 +69,10 @@ function uniqueArr(arr: number[]) {
 // Output: { firstInitial: "J", lastInitial: "D" }
 // השתמשו בממשקים מתאימים עבור הקלט והםלט של הפונקציה
 
-
+type FullName = {first: string, last: string};
+function fullNameInitials(someName: FullName) {
+    return {first: someName.first[0], last: someName.last[0]}
+}
 
 // 7.
 // כתוב פונקציה שמקבלת מערך של אובייקטים עם שדות שם וגיל, ומחזירה את הגיל הממוצע של כל האובייקטים במערך.
@@ -82,9 +85,38 @@ function uniqueArr(arr: number[]) {
 // ]
 // Output: 31.666666666666668
 
+type PersonWithAge = {name: string, age: number};
+function avgAgeOfArr(arr: PersonWithAge[]):number {
+    let sum: number = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i].age;
+    }
+    return sum / arr.length;
+}
 
 // 8.
 // כתוב פונקציה שמקבלת מערך של מספרים ומחזירה את ערכי המקסימום והמינימום במערך כאובייקט בעל שדות מתאימים.
 
+type MaxAndMinValues = {min: number, max: number};
+
+function maxAndMin(arr: number[]) {
+
+    const obj: MaxAndMinValues = {max: arr[0], min: arr[0]}
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > obj.max) {
+            obj.max = arr[i];
+        }        
+        if (arr[i] < obj.min) {
+            obj.min = arr[i];
+        }        
+    }
+    return obj;
+}
+
 // 9.
 // כתוב פונקציה שמקבלת מערך ומדפיסה אותו בסדר הפוך
+
+function reversArr(arr: any[]) {
+    console.log(arr.reverse());
+}

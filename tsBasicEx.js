@@ -48,22 +48,30 @@ function uniqueArr(arr) {
     }
     return uniqueArr;
 }
-// 6.
-// כתוב פונקציה שמקבלת אובייקט עם שדות עבור שם פרטי ושם משפחה
-// הפונקציה מחזירה אובייקט המכיל את שתי שדות המתארות את ראשי התיבות של האובייקט
-// דוגמה
-// Output: { firstInitial: "J", lastInitial: "D" }
-// השתמשו בממשקים מתאימים עבור הקלט והםלט של הפונקציה
-// 7.
-// כתוב פונקציה שמקבלת מערך של אובייקטים עם שדות שם וגיל, ומחזירה את הגיל הממוצע של כל האובייקטים במערך.
-//  עבור המערך
-// [
-//     { name: "John", age: 25 },
-//     { name: "Jane", age: 30 },
-//     { name: "Bob", age: 40 },
-// ]
-// Output: 31.666666666666668
-// 8.
-// כתוב פונקציה שמקבלת מערך של מספרים ומחזירה את ערכי המקסימום והמינימום במערך כאובייקט בעל שדות מתאימים.
+function fullNameInitials(someName) {
+    return { first: someName.first[0], last: someName.last[0] };
+}
+function avgAgeOfArr(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i].age;
+    }
+    return sum / arr.length;
+}
+function maxAndMin(arr) {
+    var obj = { max: arr[0], min: arr[0] };
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > obj.max) {
+            obj.max = arr[i];
+        }
+        if (arr[i] < obj.min) {
+            obj.min = arr[i];
+        }
+    }
+    return obj;
+}
 // 9.
 // כתוב פונקציה שמקבלת מערך ומדפיסה אותו בסדר הפוך
+function reversArr(arr) {
+    console.log(arr.reverse());
+}
